@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1413031276 source:c:\users\mateusz\dropbox\contents\marathon24 2014\pap\pap.cpp
+	<iostream>
+	<cstdlib>
+	<vector>
+

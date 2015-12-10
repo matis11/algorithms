@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1352688424 source:c:\users\matis\dropbox\scripts\c++\multidrink\mul.cpp
+	<iostream>
+	<vector>
+	<list>
+

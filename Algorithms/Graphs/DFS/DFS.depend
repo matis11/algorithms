@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1360152314 source:c:\users\matis\dropbox\scripts\c++\algorithms\graphs\dfs\dfs.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

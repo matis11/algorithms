@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1380736476 source:c:\users\mateusz\dropbox\scripts\c++\matura\anagram\anagram.cpp
+	<iostream>
+	<fstream>
+

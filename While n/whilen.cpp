@@ -1,0 +1,20 @@
+/////////////////////////////////////
+/////////////// Template ////////////
+//////////// Mateusz Bartos /////////
+////////// geekbajt@gmail.com ///////
+// http://mbartos.lo3.edu.pl/site/ //
+//////////////// 2012 ///////////////
+/////////////////////////////////////
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int i = 0;
+    while(i++ > 5)
+    {
+        cout<<"KOT\n";
+    }
+	return 0;
+}

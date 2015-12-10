@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1351585042 source:c:\users\matis\dropbox\scripts\c++\taksówki\tak.cpp
+	<cstdlib>
+	<iostream>
+
+1351162405 source:c:\users\matis\dropbox\scripts\c++\taksówki\long.cpp
+	<iostream>
+

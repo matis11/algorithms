@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1352710011 source:c:\users\matis\dropbox\scripts\c++\gobeliny\gob.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

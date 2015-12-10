@@ -1,0 +1,34 @@
+/////////////////////////////////////////////////
+////////////// Divisors Summary /////////////////
+/////////////////////////////////////////////////
+/////////////// Mateusz Bartos //////////////////
+//////// http://mbartos.lo3.edu.pl/site /////////
+//////////////////// 2012 ///////////////////////
+/////////////////////////////////////////////////
+
+
+#include<iostream>
+
+using namespace std;
+
+
+int main(){
+    int t;
+    cin>>t;
+    for(int i = 0; i < t; i++){
+        int divisors[1001];
+        int n;
+        cin>>n;
+        while(n!=0){
+            int temp = n, j;
+            if((n%temp) == 0){
+                divisors[j] = n;
+                j++;
+            }
+            n--;
+        }//while
+        
+        for(int k = 0; k<=j)
+    }//for
+    return 0;
+}

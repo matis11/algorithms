@@ -1,0 +1,155 @@
+/////////////////////////////////////////////////
+////////////////// Taksówki /////////////////////
+/////////////////////////////////////////////////
+/////////////// Mateusz Bartos //////////////////
+//////// http://mbartos.lo3.edu.pl/site /////////
+//////////////////// 2012 ///////////////////////
+/////////////////////////////////////////////////
+
+
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void swap(int &a, int &b);
+	void QuickSortVecMain(vector<int> &list);
+	void QuickSortVec(vector<int> &list, int start, int end);
+	int PartitionVec(int bot, int top, int pivot, vector<int> &list);
+
+	void swap(int &a, int&b)
+	{
+	    int temp = a;
+	    a = b;
+	    b = temp;
+	}
+
+	/* void QuickSortVecMain(vector<int> &list)
+20	{
+21	    int bot = 0;
+22	    int top = list.size() - 1;
+23
+24	    QuickSortVec(list, bot, top);
+25	} */
+
+	void QuickSortVec(vector<int> &list, int start, int end)
+	{
+	    int pivot = list[start];
+	    int pivot_point;
+
+	    if (end > start)
+	    {
+	        pivot_point = PartitionVec(start, end, pivot, list);
+	        list[pivot_point] = pivot;
+	        QuickSortVec(list, start, pivot_point - 1);
+	        QuickSortVec(list, pivot_point + 1, end);
+	    }
+	}
+
+	int PartitionVec(int bot, int top, int pivot, vector<int> &list)
+	{
+	    int left = bot;
+	    int right = top;
+
+	    while (left < right)
+	    {
+	        while(pivot < list[right] && right > left)
+	        {
+	            right--;
+	        }
+	        swap(list[left], list[right]);
+
+	        while(pivot >= list[left] && left < right)
+	        {
+	            left++;
+	        }
+	        swap(list[right], list[left]);
+	    }
+
+	    return left;
+	}
+
+
+int main(){
+    ////////////////////////////////////////////////////////////////////////////
+    // Declare and read variables
+    ////////////////////////////////////////////////////////////////////////////
+
+    /*  Variable definition
+     * ***************************************************
+     *  int d - Distance between traveler and destination
+     *  int m - Distance between traveler and taxi base
+     *  int n - Number of available taxi in taxi base
+     *  int petrol[n] - Amount of fuel in every taxi
+     * ***************************************************
+    */
+
+    int d, m, n;
+    cin>>d>>m>>n;
+    //TODO - vector <unsigned long long int> fuel;
+    vector <int> fuel;
+    for(int i = 0; i < n; i++){
+        int temp;
+        cin>>temp;
+        fuel[i] = temp;
+    }//for
+
+    ////////////////////////////////////////////////////////////////////////////
+    // Sortowanie tablicy z paliwem (QuickSort)
+    ////////////////////////////////////////////////////////////////////////////
+        //qsort (fuel, n, sizeof(int), compare);
+        QuickSortVec(fuel,0,fuel.size());
+
+    int best=-1,count=0,os=0;
+    int x=n;
+    for(int i=x;i>=1;i--){
+        if(fuel[x-1]==(d-m)){
+            best=x-1;
+
+        }
+        if(fuel[x-1]<(d-m)){
+            best = x;
+        }
+        x--;
+    }//for
+    if(best==-1){
+        cout<<"0"<<"\n";
+        return 0;
+    }//if
+    n--;
+
+    while((n>2)&&(os<d)){
+        if(n==best){
+            n--;
+            continue;
+        }
+            if(fuel[n-1]>=2*(d-os)){
+                os=d;
+                break;
+            }else{
+                fuel[n-1]-=(d-os);
+                os+=fuel[n-1];
+                n--;
+                count++;
+            }//if
+    }//while
+
+
+/////////////////////////////////////////////////////////
+// In this moment all requied taxi cab's has been used //
+// (A)----------------(B)-----------------------(C)  ////
+//                    [os]                           ////
+//                     |-------------------------|   ////
+//                                 best              ////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+// Now we are sure, thanks to .57. line, that the last //
+// and the best cab can be used to drive to the last   //
+// checkpoint. We don't need to count it, just we have //
+// to write it.                                        //
+/////////////////////////////////////////////////////////
+
+    cout<<count+1<<"\n";
+    return 0;
+}

@@ -1,0 +1,21 @@
+/////////////////////////////////////
+/////////////// test 3 /////////////
+/////////// Mateusz Bartos //////////
+///////// geekbajt@gmail.com ////////
+// http://mbartos.lo3.edu.pl/site/ //
+/////////////// 2012 ////////////////
+/////////////////////////////////////
+
+#include<iostream>
+
+using namespace std;
+
+    int tab[100000];
+
+int main(){
+    int count = 0;
+    while(cin>>x){
+        //
+    }//while
+	return 0;
+}

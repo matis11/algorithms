@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1352686699 source:c:\users\matis\dropbox\scripts\c++\cennik\cen.cpp
+	<iostream>
+	<vector>
+	<queue>
+
+1352610427 
+
+1352610427 source:c:\users\bartos\dropbox\scripts\c++\cennik\cen.cpp
+	<iostream>
+	<vector>
+	<queue>
+
+1352686699 source:/home/matis/Dropbox/Scripts/C++/Cennik/cen.cpp
+	<iostream>
+	<vector>
+	<queue>
+
